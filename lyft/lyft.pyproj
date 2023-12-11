@@ -4,13 +4,15 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>7dec01db-4303-4354-ab63-fd1c6479e521</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>lyft.py</StartupFile>
+    <StartupFile>main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>lyft</Name>
     <RootNamespace>lyft</RootNamespace>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <IsWindowsApplication>False</IsWindowsApplication>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +23,32 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="lyft.py" />
+    <Compile Include="battery\battery.py" />
+    <Compile Include="battery\nubbin_battery.py" />
+    <Compile Include="battery\spindle_battery.py" />
+    <Compile Include="car.py" />
+    <Compile Include="car_factory.py" />
+    <Compile Include="engine\capulet_engine.py" />
+    <Compile Include="engine\engine.py" />
+    <Compile Include="engine\sternman_engine.py" />
+    <Compile Include="engine\willoughby_engine.py" />
+    <Compile Include="main.py" />
+    <Compile Include="serviceable.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="battery\" />
+    <Folder Include="engine\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.9</Version>
+      <Description>env (Python 3.9 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
