@@ -4,7 +4,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>7dec01db-4303-4354-ab63-fd1c6479e521</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>main.py</StartupFile>
+    <StartupFile>
+    </StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -32,12 +33,13 @@
     <Compile Include="engine\engine.py" />
     <Compile Include="engine\sternman_engine.py" />
     <Compile Include="engine\willoughby_engine.py" />
-    <Compile Include="main.py" />
     <Compile Include="serviceable.py" />
+    <Compile Include="test\test_car.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="battery\" />
     <Folder Include="engine\" />
+    <Folder Include="test\" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">
