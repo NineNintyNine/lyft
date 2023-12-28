@@ -35,6 +35,7 @@
     <Compile Include="engine\willoughby_engine.py" />
     <Compile Include="serviceable.py" />
     <Compile Include="test\test_car.py" />
+    <Compile Include="test\__init__.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="battery\" />
