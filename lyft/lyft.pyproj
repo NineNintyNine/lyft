@@ -26,7 +26,7 @@
   <ItemGroup>
     <Compile Include="battery\battery.py" />
     <Compile Include="battery\nubbin_battery.py" />
-    <Compile Include="battery\spindle_battery.py" />
+    <Compile Include="battery\spindler_battery.py" />
     <Compile Include="car.py" />
     <Compile Include="car_factory.py" />
     <Compile Include="engine\capulet_engine.py" />
@@ -808,7 +808,17 @@
     <Compile Include="forage\Lib\site-packages\_pytest\_version.py" />
     <Compile Include="forage\Lib\site-packages\_pytest\__init__.py" />
     <Compile Include="serviceable.py" />
+    <Compile Include="test\test_battery\test_nubbin_battery.py" />
+    <Compile Include="test\test_battery\test_spindler_battery.py" />
     <Compile Include="test\test_car.py" />
+    <Compile Include="test\test_engine\test_capulet_engine.py" />
+    <Compile Include="test\test_engine\test_sternman_engine.py" />
+    <Compile Include="test\test_engine\test_willoughby_engine.py" />
+    <Compile Include="test\test_tire\test_carrigan_tires.py" />
+    <Compile Include="test\test_tire\test_octoprime_tires.py" />
+    <Compile Include="tire\carrigan_tires.py" />
+    <Compile Include="tire\octoprime_tires.py" />
+    <Compile Include="tire\tire.py" />
     <Compile Include="utils.py" />
   </ItemGroup>
   <ItemGroup>
@@ -1017,6 +1027,10 @@
     <Folder Include="forage\Lib\site-packages\_pytest\__pycache__\" />
     <Folder Include="forage\Lib\site-packages\__pycache__\" />
     <Folder Include="forage\Scripts\" />
+    <Folder Include="test\test_tire\" />
+    <Folder Include="test\test_battery\" />
+    <Folder Include="test\test_engine\" />
+    <Folder Include="tire\" />
     <Folder Include="test\" />
   </ItemGroup>
   <ItemGroup>

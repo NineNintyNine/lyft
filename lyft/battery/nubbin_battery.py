@@ -10,5 +10,9 @@ class NubbinBattery(Battery):
           
     def needs_service(self)->bool:
         duration = add_years_to_date(self.last_service_date,4)
-        return duration < self.current_date
+        #return duration < self.current_date
+        if duration < self.current_date:
+            return True
+        else:
+            return False
     
