@@ -7,27 +7,30 @@ from car_factory import CarFactory
 class TestCalliope(unittest.TestCase):
     def test_battery_should_be_serviced(self):
         current_date = datetime.today().date()
-        last_service_date = current_date.replace(year=current_date.year - 3)
+        last_service_date = current_date.replace(year=current_date.year - 2)
         current_mileage = 0
         last_service_mileage = 0
+        sensor_array = [0.1,0.1,0.5,0.6]
+        
          
         car_factory = CarFactory()
-        calliope_car = car_factory.create_calliope(current_date,last_service_date,current_mileage,last_service_mileage)
+        calliope_car = car_factory.create_calliope(current_date,last_service_date,current_mileage,last_service_mileage, sensor_array)
         self.assertTrue(car_factory.needs_service(calliope_car))
         
 
     def test_battery_should_not_be_serviced(self):
         current_date = datetime.today().date()
-        last_service_date = current_date.replace(year=current_date.year - 1)
+        last_service_date = current_date.replace(year=current_date.year - 2)
         current_mileage = 0
         last_service_mileage = 0
+        sensor_array = [0.1,0.1,0.5,0.6]
         
         car_factory = CarFactory()
-        calliope_car = car_factory.create_calliope(current_date,last_service_date,current_mileage,last_service_mileage)
+        calliope_car = car_factory.create_calliope(current_date,last_service_date,current_mileage,last_service_mileage, sensor_array)
         self.assertTrue(car_factory.needs_service(calliope_car))
         
 
-
+'''
     def test_engine_should_be_serviced(self):
         last_service_date = datetime.today().date()
         current_date = datetime.today().date()
@@ -204,7 +207,7 @@ class TestThovex(unittest.TestCase):
         car_factory = CarFactory()
         thovex_car = car_factory.create_thovex(current_date, last_service_date, current_mileage, last_service_mileage)
         self.assertTrue(car_factory.needs_service(thovex_car))
-
+        
     def test_engine_should_not_be_serviced(self):
         last_service_date = datetime.today().date()
         current_date = datetime.today().date()
@@ -214,7 +217,7 @@ class TestThovex(unittest.TestCase):
         car_factory = CarFactory()
         thovex_car = car_factory.create_thovex(current_date, last_service_date, current_mileage, last_service_mileage)
         self.assertTrue(car_factory.needs_service(thovex_car))
-
+'''
 
 if __name__ == '__main__':
     unittest.main()

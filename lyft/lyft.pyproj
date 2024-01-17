@@ -809,6 +809,9 @@
     <Compile Include="forage\Lib\site-packages\_pytest\__init__.py" />
     <Compile Include="serviceable.py" />
     <Compile Include="test\test_car.py" />
+    <Compile Include="tire\carrigan_tires.py" />
+    <Compile Include="tire\octoprime_tires.py" />
+    <Compile Include="tire\tire.py" />
     <Compile Include="utils.py" />
   </ItemGroup>
   <ItemGroup>
@@ -1017,6 +1020,7 @@
     <Folder Include="forage\Lib\site-packages\_pytest\__pycache__\" />
     <Folder Include="forage\Lib\site-packages\__pycache__\" />
     <Folder Include="forage\Scripts\" />
+    <Folder Include="tire\" />
     <Folder Include="test\" />
   </ItemGroup>
   <ItemGroup>
