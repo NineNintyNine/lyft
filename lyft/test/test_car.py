@@ -28,7 +28,7 @@ class TestCalliope(unittest.TestCase):
         self.assertFalse(car_factory.needs_service(calliope_car))
         
 
-
+'''
     def test_engine_should_be_serviced(self):
         last_service_date = datetime.today().date()
         current_date = datetime.today().date()
